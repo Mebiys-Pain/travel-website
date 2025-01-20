@@ -1,0 +1,372 @@
+/* Сброс */
+body, h1, h2, h3, p, ul, li, a, img, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button, .button {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Шапка */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav a {
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #007BFF;
+}
+
+/* Главный блок */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+}
+
+.hero-text {
+    text-align: left; /* Выравниваем текст по левому краю */
+    margin: 0; /* Центрируем текстовый блок, если он меньше родителя */
+    max-width: 600px; /* Ограничиваем ширину текстового блока */
+}
+
+.hero h1, .hero .subtitle, .hero .features, .hero .button {
+    margin-left: 0; /* Обеспечиваем корректное выравнивание */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-text .subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.hero-text .features {
+    list-style: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.hero-text .features li {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+    font-size: 18px !important;
+    gap: 10px !important;
+}
+
+.hero-text .features li img {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-text .features li b {
+    color: #fff;
+    font-size: 20px;
+}
+
+.hero-text .button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-text .button:hover {
+    background-color: #0056b3;
+}
+
+/* Изображение */
+.hero-image {
+    flex: 1; /* Занимает 50% ширины */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero .subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+.hero .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.hero .features li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.hero .features li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.hero .features li b {
+    color: #fff;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero .button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #0056b3;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.hero ul li {
+    margin-bottom: 10px;
+}
+
+/* Услуги */
+.services {
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+.services .container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.service-item img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Форма */
+.form-section {
+    padding: 50px 20px;
+    background-color: #000;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Подвал */
+.footer {
+    padding: 50px 20px;
+    background-color: #111;
+    border-top: 1px solid #333;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    max-width: 30%;
+}
+
+.footer-logo h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-links h4, .footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-links nav a {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links nav a:hover {
+    color: #007BFF;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a img:hover {
+    transform: scale(1.1);
+}
+
